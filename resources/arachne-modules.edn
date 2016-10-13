@@ -1,0 +1,21 @@
+;;; Please see ADR-004 for more details:
+;;; https://github.com/arachne-framework/architecture/blob/master/adr-004-module-loading.md
+
+
+;;; Replace the GROUP-ID portion of the value of the key :arachne.module/name
+;;; found below with your own Maven Coordinate GROUP-ID. Currently GROUP-ID is:
+;;; org.arachne-framework
+;;; But, please note, you musn't change the GROUP-ID of the arachne-core
+;;; artifact, found in the :arachne.module/dependencies vector.
+
+;;; If you're not sure what a GROUP-ID etc. is, please visit:
+;;; https://maven.apache.org/pom.html#Maven_Coordinates
+
+
+;;; Replace the artifact portion (arachne-mymod) with the name of your module.
+
+[{:arachne.module/name :org.arachne-framework/arachne-mymod
+  :arachne.module/schema arachne.mymod/schema
+  :arachne.module/configure arachne.mymod/configure
+  :arachne.module/dependencies [:org.arachne-framework/arachne-core]}]
+
